@@ -26,7 +26,7 @@ This repository contains the **Immunization Dashboard**, a Tableau visualization
 
 ## View the Dashboard
 
-[View the Interactive Dashboard on Tableau Public]([https://public.tableau.com/views/your-dashboard-link](https://public.tableau.com/views/ImmunizationDashboard_17399922248810/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[View the Interactive Dashboard on Tableau Public](https://public.tableau.com/views/ImmunizationDashboard_17399922248810/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 [![Dashboard Screenshot](./immunization_dashboard_preview.png)](https://public.tableau.com/views/ImmunizationDashboard_17399922248810/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
