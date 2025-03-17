@@ -1,30 +1,40 @@
-# Immunization Dashboard
+# 2022 Flu Shot Compliance Dashboard
 
-This repository contains the **Immunization Dashboard**, a Tableau visualization of flu shot compliance using Synthea-generated patient data for the year 2022. The dashboard explores vaccination trends within a simulated healthcare system and highlights demographic and geographic breakdowns of flu shot uptake.
+This repository contains an interactive dashboard visualizing flu shot compliance using Synthea-generated patient data from a simulated healthcare system. The dashboard focuses on immunization rates for the year 2022, highlighting trends and disparities across age, race, and geography.
 
 ## Dashboard Features
 
-- Filterable map to view flu shot data by county
-- Total flu shots given and compliance rate for 2022
-- Running sum of flu shots administered throughout the year
-- Compliance breakdowns by:
-  - Age group
-  - Race
-  - County
-- Patient-level table showing individuals who received flu shots, including their age and compliance status
+- Flu shot compliance rates by county (displayed on a map)
+- Stratified compliance by age and race
+- Running total of flu shots administered over the course of 2022
+- Overall flu shot compliance percentage
+- Patient-level table listing demographics and flu shot status
 
 ## Tools Used
 
-- **SQL**: Used for data cleaning, transformation, and preparing tables for analysis
-- **Tableau**: Used for dashboard design and visualization
+- PostgreSQL (via pgAdmin 4) for querying and data preparation
+- SQL for extracting and transforming immunization and demographic data
+- Tableau for interactive data visualization
 
 ## Dataset
 
-- **Source**: Synthea (Synthetic Patient Generator)
-- **Type**: Simulated patient-level immunization data for the year 2022
-- **Note**: This dataset is synthetically generated and does not represent real patient information.
+- **Source**: [Synthea](https://synthetichealth.github.io/synthea/) – open-source synthetic health records
+- **Scope**: Simulated patient encounters and immunizations from 2020 through 2022
+- **Inclusion Criteria**:
+  - Patients must have had at least one healthcare encounter between 2020 and 2022
+  - Patients must be alive as of the end of 2022
+  - Only patients aged six months or older are included (per flu shot guidelines)
 
-## View the Dashboard
+## SQL Logic
+
+The SQL code used to prepare the dashboard dataset is included in [`flu_shot_compliance_2022.sql`](./flu_shot_compliance_2022.sql). Key steps include:
+
+1. Filtering for active patients
+2. Identifying patients who received flu shots in 2022
+3. Calculating patient age as of December 31, 2022
+4. Joining demographic, geographic, and healthcare utilization data into a single table for use in Tableau
+
+## Tableau Dashboard
 
 [View the Interactive Dashboard on Tableau Public](https://public.tableau.com/views/ImmunizationDashboard_17399922248810/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
@@ -34,11 +44,11 @@ This repository contains the **Immunization Dashboard**, a Tableau visualization
 
 ## Summary
 
-This project demonstrates my ability to analyze patient-level healthcare data, develop flu shot compliance metrics, and communicate key trends through interactive visualizations. It showcases practical skills in data preparation, SQL querying, and visual storytelling using Tableau.
+This project analyzes flu shot compliance using synthetic electronic health record data. The dashboard provides a visual summary of who is receiving flu shots and where, allowing users to explore immunization patterns by county, age, and race. This work demonstrates how SQL and Tableau can be used together to extract insights from large datasets and communicate them effectively.
 
 ## Skills Demonstrated
 
-- Data cleaning and transformation using SQL
-- Building interactive Tableau dashboards with filters and maps
-- Analyzing synthetic healthcare data for immunization trends
-- Presenting data-driven insights with clarity and purpose
+- Data extraction, transformation, and filtering using SQL in PostgreSQL
+- Analyzing health-related data for patterns and disparities
+- Designing effective and informative dashboards in Tableau
+- Communicating insights through structured documentation and visualization
